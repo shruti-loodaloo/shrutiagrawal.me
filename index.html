@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700&family=Love+Ya+Like+A+Sister&display=swap"
+      rel="stylesheet"
+    />
     <style>
       * {
         box-sizing: border-box;
@@ -21,16 +26,52 @@
         height: 100vh;
         object-fit: cover;
         object-position: 15%;
+        margin-bottom: 250px;
+      }
+
+      .parent-box {
+        position: absolute;
+        width: 100%;
+        bottom: -200px;
       }
 
       .welcome-text {
+        font-family: "Love Ya Like A Sister";
         background-color: white;
         width: 90%;
         margin: auto;
         border-radius: 16px;
         box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.25);
-        position: relative;
-        top: -100px;
+        padding: 16px;
+      }
+
+      .welcome-text > h1 {
+        font-family: "Love Ya Like A Sister";
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 36px;
+      }
+
+      .welcome-text > p {
+        font-family: "Life Savers";
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      .red {
+        color: rgba(255, 0, 61, 1);
+      }
+
+      .yellow {
+        color: rgba(255, 199, 0, 1);
+      }
+
+      .blue {
+        color: rgba(0, 84, 209, 1);
+      }
+
+      .green {
+        color: rgba(47, 182, 0, 1);
       }
     </style>
   </head>
@@ -40,15 +81,25 @@
       alt="A picture of Shruti sitting on rocks on the banks of a stream."
       class="background-image"
     />
-    <div class="welcome-text">
-      <h1>
-        Hi there! I am Shruti Agrawal. Welcome to My Corner of the Internet!
-      </h1>
-      <p>
-        This is my space for sharing things I love. Drawings, Paintings and
-        other little things I make, books I read, the music I listen toand a lot
-        more. I hope you enjoy browsing around!
-      </p>
+    <div class="parent-box">
+      <div class="welcome-text">
+        <h1>
+          Hi there! <br />
+          I am <span class="red">Shruti Agrawal.</span><br />
+          <span class="yellow">Welcome</span> to
+          <span class="blue"> My Corner </span> <br />of the
+          <span class="green">Internet!</span>
+        </h1>
+        <p>
+          This is my space for sharing things I love. Drawings, Paintings and
+          other little things I make, books I read, the music I listen toand a
+          lot more. I hope you enjoy browsing around!
+        </p>
+      </div>
     </div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, doloribus
+    veniam, sequi maiores tempore ullam placeat perferendis temporibus,
+    consectetur ab repellat neque nobis harum aliquid doloremque rem suscipit
+    beatae! Beatae?
   </body>
 </html>
