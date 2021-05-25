@@ -27,13 +27,18 @@
         height: 100vh;
         object-fit: cover;
         object-position: 15%;
-        margin-bottom: 250px;
+        margin-bottom: 300px;
+      }
+
+      @media screen and (min-width: 700px) {
+        .background-image {
+          margin-bottom: 0;
+        }
       }
 
       .parent-box {
         position: absolute;
         width: 100%;
-        bottom: -30px;
         top: 0;
       }
 
@@ -114,6 +119,63 @@
           margin-bottom: 60px;
         }
       }
+
+      .links {
+        text-align: center;
+      }
+
+      .link-parent {
+        display: inline-block;
+        width: 200px;
+        margin: 50px;
+      }
+
+      .link-box {
+        display: inline-block;
+        background-color: white;
+        width: 200px;
+        height: 200px;
+        border-radius: 16px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #909090;
+        transition: all 150ms;
+      }
+
+      .link-parent:hover .link-box-left {
+        box-shadow: 0px 5px 40px 0px rgba(70, 70, 70, 0.2);
+        transform: scale(1.1) rotate(3deg) translate(0, -10px);
+      }
+
+      .link-parent:hover .link-box-right {
+        box-shadow: 0px 5px 40px 0px rgba(70, 70, 70, 0.2);
+        transform: scale(1.1) rotate(-3deg) translate(0, -10px);
+      }
+
+      .link-image {
+        width: 178px;
+        height: 178px;
+        margin: 10px;
+        border-radius: 11px;
+        object-fit: cover;
+      }
+
+      .link-label {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-family: "Love Ya Like A Sister";
+        font-weight: normal;
+        margin-top: 16px;
+        font-size: 40px;
+        color: #404040;
+        transition: all 150ms;
+      }
+
+      .link-parent:hover .link-label {
+        color: rgba(255, 0, 61, 1);
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
@@ -139,6 +201,55 @@
           lot more. I hope you enjoy browsing around!
         </p>
       </div>
+    </div>
+    <div class="links">
+      <a class="link-parent" href="https://example.com">
+        <span class="link-box link-box-left">
+          <img class="link-image" src="background-image.webp" />
+        </span>
+        <br />
+        <span class="link-label">Reading</span>
+      </a>
+
+      <a class="link-parent" href="https://example.com">
+        <span class="link-box link-box-right">
+          <img class="link-image" src="background-image.webp" />
+        </span>
+        <br />
+        <span class="link-label">Videos</span>
+      </a>
+
+      <a class="link-parent" href="https://example.com">
+        <span class="link-box link-box-left">
+          <img class="link-image" src="background-image.webp" />
+        </span>
+        <br />
+        <span class="link-label">Music</span>
+      </a>
+
+      <a class="link-parent" href="https://example.com">
+        <span class="link-box link-box-right">
+          <img class="link-image" src="background-image.webp" />
+        </span>
+        <br />
+        <span class="link-label">Art</span>
+      </a>
+
+      <a class="link-parent" href="https://example.com">
+        <span class="link-box link-box-left">
+          <img class="link-image" src="background-image.webp" />
+        </span>
+        <br />
+        <span class="link-label">writing</span>
+      </a>
+
+      <a class="link-parent" href="https://example.com">
+        <span class="link-box link-box-right">
+          <img class="link-image" src="background-image.webp" />
+        </span>
+        <br />
+        <span class="link-label">Other</span>
+      </a>
     </div>
   </body>
 </html>
