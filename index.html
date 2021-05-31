@@ -10,176 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700&family=Love+Ya+Like+A+Sister&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: white;
-        position: relative;
-      }
-
-      .background-image {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        object-position: 15%;
-        margin-bottom: 300px;
-      }
-
-      @media screen and (min-width: 700px) {
-        .background-image {
-          margin-bottom: 0;
-        }
-      }
-
-      .parent-box {
-        position: absolute;
-        width: 100%;
-        top: 0;
-      }
-
-      @media screen and (min-width: 700px) {
-        .parent-box {
-          width: 600px;
-
-          right: 0;
-        }
-      }
-
-      .raised-panel {
-        box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.25);
-      }
-
-      .welcome-text {
-        font-family: "Love Ya Like A Sister";
-        background-color: white;
-        width: 90%;
-        margin: auto;
-        border-radius: 16px;
-        padding: 32px 48px;
-        background-image: url("/images/ruled-notebook-background.jpg");
-      }
-
-      .welcome-text > h1 {
-        font-family: "Love Ya Like A Sister";
-        font-weight: normal;
-      }
-
-      @media screen and (min-width: 700px) {
-        .welcome-text > h1 {
-          font-size: 40px;
-          line-height: 44px;
-        }
-      }
-
-      .welcome-text > p {
-        font-family: "Life Savers";
-        font-size: 22px;
-        line-height: 30px;
-        font-weight: 700;
-      }
-
-      .red {
-        color: rgba(255, 0, 61, 1);
-      }
-
-      .yellow {
-        color: rgba(255, 199, 0, 1);
-      }
-
-      .blue {
-        color: rgba(0, 84, 209, 1);
-      }
-
-      .green {
-        color: rgba(47, 182, 0, 1);
-      }
-
-      .website-name {
-        color: rgba(255, 255, 255, 0.8);
-        font-family: "Life Savers";
-        font-weight: 700;
-        text-align: center;
-
-        font-size: 30px;
-        letter-spacing: 5px;
-        margin-top: 15px;
-        margin-bottom: 250px;
-      }
-
-      @media screen and (min-width: 700px) {
-        .website-name {
-          font-size: 30px;
-          letter-spacing: 15px;
-          margin-top: 60px;
-          margin-bottom: 60px;
-        }
-      }
-
-      .links {
-        text-align: center;
-      }
-
-      .link-parent {
-        display: inline-block;
-        width: 200px;
-        margin: 50px;
-      }
-
-      .link-box {
-        display: inline-block;
-        background-color: white;
-        width: 200px;
-        height: 200px;
-        border-radius: 16px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #909090;
-        transition: all 150ms; /*cubic-bezier(0.53, -1.16, 0.46, 1.98);*/
-        box-shadow: 0px 3px 4px 0px rgba(70, 70, 70, 0.3);
-      }
-
-      .link-parent:hover .link-box-left {
-        box-shadow: 0px 15px 30px 0px rgba(70, 70, 70, 0.2);
-        transform: scale(1.1) rotate(-3deg) translate(0, -20px);
-      }
-
-      .link-parent:hover .link-box-right {
-        box-shadow: 0px 15px 30px 0px rgba(70, 70, 70, 0.2);
-        transform: scale(1.1) rotate(3deg) translate(0, -20px);
-      }
-
-      .link-image {
-        width: 178px;
-        height: 178px;
-        margin: 10px;
-        border-radius: 11px;
-        object-fit: cover;
-      }
-
-      .link-label {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        font-family: "Love Ya Like A Sister";
-        font-weight: normal;
-        margin-top: 16px;
-        font-size: 40px;
-        color: #404040;
-        transition: all 150ms;
-      }
-
-      .link-parent:hover .link-label {
-        color: rgba(255, 0, 61, 1);
-        transform: scale(1.1);
-      }
-    </style>
+    <link href="styles/section.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="home-page">
     <img
       src="/images/background-image.jpg"
       alt="A picture of Shruti sitting on rocks on the banks of a stream."
@@ -191,10 +24,10 @@
       <div class="welcome-text ruled-notebook-background raised-panel">
         <h1>
           Hi there! <br />
-          I am <span class="red">Shruti Agrawal.</span><br />
-          <span class="yellow">Welcome</span> to
-          <span class="blue"> My Corner </span> <br />of the
-          <span class="green">Internet!</span>
+          I am <span class="text-red">Shruti Agrawal.</span><br />
+          <span class="text-yellow">Welcome</span> to
+          <span class="text-blue"> My Corner </span> <br />of the
+          <span class="text-green">Internet!</span>
         </h1>
         <p>
           This is my space for sharing things I love. Drawings, Paintings and
@@ -203,71 +36,71 @@
         </p>
       </div>
     </div>
-    <div class="links">
-      <a class="link-parent" href="/sections/reading.html">
-        <span class="link-box link-box-left">
+    <div class="home-page-links">
+      <a class="home-page-link-parent" href="/sections/reading.html">
+        <span class="home-page-link-box home-page-link-box-left">
           <img
-            class="link-image"
+            class="home-page-link-image"
             src="/images/website_home_botton_doodles-reading.jpg"
           />
         </span>
         <br />
-        <span class="link-label">Reading</span>
+        <span class="home-page-link-label">Reading</span>
       </a>
 
-      <a class="link-parent" href="/sections/vidios.html">
-        <span class="link-box link-box-right">
+      <a class="home-page-link-parent" href="/sections/vidios.html">
+        <span class="home-page-link-box home-page-link-box-right">
           <img
-            class="link-image"
+            class="home-page-link-image"
             src="/images/website_home_botton_doodles-videos.jpg"
           />
         </span>
         <br />
-        <span class="link-label">Videos</span>
+        <span class="home-page-link-label">Videos</span>
       </a>
 
-      <a class="link-parent" href="/sections/music.html">
+      <a class="home-page-link-parent" href="/sections/music.html">
         <span class="link-box link-box-left">
           <img
-            class="link-image"
+            class="home-page-link-image"
             src="/images/website_home_botton_doodles-music.jpg"
           />
         </span>
         <br />
-        <span class="link-label">Music</span>
+        <span class="home-page-link-label">Music</span>
       </a>
 
-      <a class="link-parent" href="/sections/art.html">
-        <span class="link-box link-box-right">
+      <a class="home-page-link-parent" href="/sections/art.html">
+        <span class="home-page-link-box home-page-link-box-right">
           <img
-            class="link-image"
+            class="home-page-link-image"
             src="/images/website_home_botton_doodles-art.jpg"
           />
         </span>
         <br />
-        <span class="link-label">Art</span>
+        <span class="home-page-link-label">Art</span>
       </a>
 
-      <a class="link-parent" href="/sections/writing.html">
+      <a class="home-page-link-parent" href="/sections/writing.html">
         <span class="link-box link-box-left">
           <img
-            class="link-image"
+            class="home-page-link-image"
             src="/images/website_home_botton_doodles-writing.jpg"
           />
         </span>
         <br />
-        <span class="link-label">writing</span>
+        <span class="home-page-link-label">writing</span>
       </a>
 
-      <a class="link-parent" href="/sections/other.html">
-        <span class="link-box link-box-right">
+      <a class="home-page-link-parent" href="/sections/other.html">
+        <span class="home-page-link-box home-page-link-box-right">
           <img
-            class="link-image"
+            class="home-page-link-image"
             src="/images/website_home_botton_doodles-other.jpg"
           />
         </span>
         <br />
-        <span class="link-label">Other</span>
+        <span class="home-page-link-label">Other</span>
       </a>
     </div>
   </body>
