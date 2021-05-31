@@ -45,6 +45,7 @@ body.home-page {
   border-radius: 16px;
   padding: 32px 48px;
   background-image: url("/images/ruled-notebook-background.jpg");
+  color: #404040;
 }
 
 .welcome-text > h1 {
@@ -202,6 +203,7 @@ body.home-page {
 .gallery-selected-item-discription-box {
   position: absolute;
   bottom: 30px;
+  color: #404040;
 }
 
 .gallery-selected-item-discription {
@@ -299,4 +301,31 @@ body.home-page {
 
 .display-block {
   display: block;
+}
+
+.gallery-button {
+  position: absolute;
+  top: 40%;
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background-color: white;
+  font-size: 30px;
+  color: #404040;
+}
+
+.gallery-button-back {
+  left: 8px;
+}
+
+.gallery-button-next {
+  right: 8px;
+}
+
+@media screen and (max-width: 700px) {
+  .gallery-button {
+    display: block;
+  }
 }
