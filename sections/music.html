@@ -90,11 +90,17 @@
         </div>
       </div>
       <!-- --------------------------------------------- -->
-      <button class="gallery-button gallery-button-back raised-panel">
+      <button
+        class="gallery-button gallery-button-back raised-panel"
+        onclick="gallery.goBack()"
+      >
         &lt;
       </button>
 
-      <button class="gallery-button gallery-button-next raised-panel">
+      <button
+        class="gallery-button gallery-button-next raised-panel"
+        onclick="gallery.goNext()"
+      >
         &gt;
       </button>
       <!-- --------------------------------------------- -->
@@ -153,6 +159,34 @@
       </div>
     </div>
     <script>
+      const gallery = {
+        allPanels: [...document.querySelectorAll(".gallery-selected-item-box")],
+        currentPanelIndex: 0,
+        goNext: function () {
+          if (this.currentPanelIndex < this.allPanels.length - 1) {
+            this.currentPanelIndex = this.currentPanelIndex + 1;
+
+            this.updateVisiblePanel();
+          }
+        },
+        goBack: function () {
+          if (this.currentPanelIndex > 0) {
+            this.currentPanelIndex = this.currentPanelIndex - 1;
+
+            this.updateVisiblePanel();
+          }
+        },
+        updateVisiblePanel: function () {
+          // 1. hide all the panels
+          for (let i = 0; i < this.allPanels.length; i = i + 1) {
+            this.allPanels[i].classList.remove("display-block");
+          }
+          // 2. show the panel with the index === this.currentPanelIndex
+          this.allPanels[this.currentPanelIndex].classList.add("display-block");
+        },
+      };
+      gallery.updateVisiblePanel();
+
       function showGalleryClickedItem(id) {
         removeDisplayBlockFromElementById(1);
         removeDisplayBlockFromElementById(2);
