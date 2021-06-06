@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shrutiagrawal.me - Art</title>
+    <title>shrutiagrawal.me - Music</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700&family=Love+Ya+Like+A+Sister&display=swap"
@@ -12,13 +12,12 @@
     <link href="/styles/section.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- <h1>Writing</h1> -->
     <div class="gallery-main-box">
       <div class="gallery-selected-item">
-        <div class="gallery-selected-item-box">
+        <div class="gallery-selected-item-box display-block" id="1">
           <img
             class="gallery-selected-item-image"
-            src="/images/background-image.webp"
+            src="/images/Katy_Perry_music_section.jpg"
           />
           <div class="gallery-selected-item-discription-box">
             <div
@@ -28,42 +27,179 @@
                 raised-panel
               "
             >
-              <h1>An interesting item title!</h1>
-              <span>16 May 2019</span>
+              <h1>Katy Perry songs</h1>
+              <span>29 May 2021</span>
               <p>
-                This is my space for sharing things I love. Drawings, Paintings
-                and other little things I make, books I read, the music I listen
-                to and a lot more. I hope you enjoy browsing around!
+                This a picture of Katy Perry one of my favorite singers. I like
+                her because some of her songs like Daisies, Not the End of the
+                World, Smile, Roar. They are some of my favorite so I recommend
+                them to you too!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-selected-item-box" id="2">
+          <img
+            class="gallery-selected-item-image"
+            src="/images/website_home_botton_doodles-other.jpg"
+          />
+          <div class="gallery-selected-item-discription-box">
+            <div
+              class="
+                gallery-selected-item-discription
+                ruled-notebook-background
+                raised-panel
+              "
+            >
+              <h1>Katy Perry songs</h1>
+              <span>29 May 2021</span>
+              <p>
+                This a picture of Katy Perry one of my favorite singers. I like
+                her because some of her songs like Daisies, Not the End of the
+                World, Smile, Roar. They are some of my favorite so I recommend
+                them to you too!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-selected-item-box" id="3">
+          <img
+            class="gallery-selected-item-image"
+            src="/images/website_home_botton_doodles-reading.jpg"
+          />
+          <div class="gallery-selected-item-discription-box" id="3">
+            <div
+              class="
+                gallery-selected-item-discription
+                ruled-notebook-background
+                raised-panel
+              "
+            >
+              <h1>Katy Perry songs</h1>
+              <span>29 May 2021</span>
+              <p>
+                This a picture of Katy Perry one of my favorite singers. I like
+                her because some of her songs like Daisies, Not the End of the
+                World, Smile, Roar. They are some of my favorite so I recommend
+                them to you too!
               </p>
             </div>
           </div>
         </div>
       </div>
+      <!-- --------------------------------------------- -->
+      <button
+        class="gallery-button gallery-button-back raised-panel"
+        onclick="gallery.goBack()"
+      >
+        &lt;
+      </button>
+
+      <button
+        class="gallery-button gallery-button-next raised-panel"
+        onclick="gallery.goNext()"
+      >
+        &gt;
+      </button>
+      <!-- --------------------------------------------- -->
+
       <div class="gallery-items">
-        <span class="gallery-item gallery-item-left">
-          <img class="gallery-item-image" src="/images/background-image.webp" />
-        </span>
+        <button
+          class="gallery-item gallery-item-left display-block"
+          onclick="showGalleryClickedItem(1)"
+        >
+          <img
+            class="gallery-item-image"
+            src="/images/Katy_Perry_music_section.jpg"
+          />
+        </button>
 
-        <span class="gallery-item gallery-item-right">
-          <img class="gallery-item-image" src="/images/background-image.webp" />
-        </span>
+        <button
+          class="gallery-item gallery-item-right"
+          onclick="showGalleryClickedItem(2)"
+        >
+          <img
+            class="gallery-item-image"
+            src="/images/website_home_botton_doodles-other.jpg"
+          />
+        </button>
 
-        <span class="gallery-item gallery-item-left">
-          <img class="gallery-item-image" src="/images/background-image.webp" />
-        </span>
+        <button
+          class="gallery-item gallery-item-left"
+          onclick="showGalleryClickedItem(3)"
+        >
+          <img
+            class="gallery-item-image"
+            src="/images/website_home_botton_doodles-reading.jpg"
+          />
+        </button>
 
-        <span class="gallery-item gallery-item-right">
-          <img class="gallery-item-image" src="/images/background-image.webp" />
-        </span>
+        <!-- <button class="gallery-item gallery-item-right">
+          <img
+            class="gallery-item-image"
+            src="/images/website_home_botton_doodles-videos.jpg"
+          />
+        </button>
 
-        <span class="gallery-item gallery-item-left">
-          <img class="gallery-item-image" src="/images/background-image.webp" />
-        </span>
+        <button class="gallery-item gallery-item-left">
+          <img
+            class="gallery-item-image"
+            src="/images/website_home_botton_doodles-writing.jpg"
+          />
+        </button>
 
-        <span class="gallery-item gallery-item-right">
-          <img class="gallery-item-image" src="/images/background-image.webp" />
-        </span>
+        <button class="gallery-item gallery-item-right">
+          <img
+            class="gallery-item-image"
+            src="/images/website_home_botton_doodles-art.jpg"
+          />
+        </button> -->
       </div>
     </div>
+    <script>
+      const gallery = {
+        allPanels: [...document.querySelectorAll(".gallery-selected-item-box")],
+        currentPanelIndex: 0,
+        goNext: function () {
+          if (this.currentPanelIndex < this.allPanels.length - 1) {
+            this.currentPanelIndex = this.currentPanelIndex + 1;
+
+            this.updateVisiblePanel();
+          }
+        },
+        goBack: function () {
+          if (this.currentPanelIndex > 0) {
+            this.currentPanelIndex = this.currentPanelIndex - 1;
+
+            this.updateVisiblePanel();
+          }
+        },
+        updateVisiblePanel: function () {
+          // 1. hide all the panels
+          for (let i = 0; i < this.allPanels.length; i = i + 1) {
+            this.allPanels[i].classList.remove("display-block");
+          }
+          // 2. show the panel with the index === this.currentPanelIndex
+          this.allPanels[this.currentPanelIndex].classList.add("display-block");
+        },
+      };
+      gallery.updateVisiblePanel();
+
+      function showGalleryClickedItem(id) {
+        removeDisplayBlockFromElementById(1);
+        removeDisplayBlockFromElementById(2);
+        removeDisplayBlockFromElementById(3);
+
+        let GalleryClickedItem = document.getElementById(id);
+        GalleryClickedItem.classList.add("display-block");
+      }
+
+      function removeDisplayBlockFromElementById(id) {
+        let element = document.getElementById(id);
+        element.classList.remove("display-block");
+      }
+    </script>
   </body>
 </html>
