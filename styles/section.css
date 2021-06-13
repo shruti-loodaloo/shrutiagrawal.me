@@ -330,14 +330,18 @@ body.home-page {
   }
 }
 
-.gallery-selected-item-tom-gates {
-  background-color: rgb(232, 160, 235);
+.background-red {
+  background-color: rgb(250, 76, 117);
 }
 
-.gallery-selected-item-grans-bag-of-stories {
-  background-color: rgb(103, 143, 204);
+.background-yellow {
+  background-color: rgb(250, 215, 90);
 }
 
-.gallery-selected-item-taffy-rabbit {
-  background-color: rgb(236, 218, 112);
+.background-blue {
+  background-color: rgb(65, 122, 209);
+}
+
+.background-green {
+  background-color: rgb(118, 211, 87);
 }
