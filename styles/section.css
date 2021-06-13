@@ -204,6 +204,7 @@ body.home-page {
   position: absolute;
   bottom: 30px;
   color: #404040;
+  width: 100%;
 }
 
 .gallery-selected-item-discription {
