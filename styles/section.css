@@ -14,6 +14,15 @@ body {
   height: 100%;
 }
 
+body.section {
+  background: rgb(251, 251, 251);
+  background: radial-gradient(
+    circle,
+    rgba(251, 251, 251, 1) 0%,
+    rgb(223, 223, 223) 100%
+  );
+}
+
 .background-image {
   width: 100%;
   height: 100vh;
@@ -174,7 +183,6 @@ body {
 .gallery-main-box {
   width: 100vw;
   height: 100%;
-  background-color: #f5f5f5;
   overflow: hidden;
   position: relative;
 }
@@ -203,6 +211,10 @@ body {
   width: 100%;
   height: 80%;
   object-fit: cover;
+}
+
+.art-section .gallery-selected-item-image {
+  object-fit: contain;
 }
 
 .gallery-selected-item-discription-box {
@@ -322,6 +334,8 @@ body {
   background-color: white;
   font-size: 30px;
   color: #404040;
+  cursor: pointer;
+  box-shadow: 0px 3px 4px 0px rgba(70, 70, 70, 0.3);
 }
 
 .gallery-button-back {
@@ -335,6 +349,10 @@ body {
 @media screen and (max-width: 700px) {
   .gallery-button {
     display: block;
+  }
+
+  .gallery-button-hidden {
+    display: none;
   }
 }
 
@@ -352,4 +370,24 @@ body {
 
 .background-green {
   background-color: rgb(118, 211, 87);
+}
+
+.back-button {
+  top: 8px;
+  left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transition: transform 75ms ease;
+}
+
+.back-button:hover {
+  box-shadow: 0px 5px 20px 0px rgba(70, 70, 70, 0.2);
+  transform: scale(1.07);
+}
+
+.back-button:active {
+  box-shadow: 0px 5px 10px 0px rgba(70, 70, 70, 0.2);
+  transform: scale(0.97);
 }

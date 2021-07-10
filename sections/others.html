@@ -11,7 +11,7 @@
     />
     <link href="/styles/section.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="section others-section">
     <div class="gallery-main-box">
       <div class="gallery-selected-item">
         <div class="gallery-selected-item-box display-block" id="1">
@@ -94,14 +94,48 @@
         class="gallery-button gallery-button-back raised-panel"
         onclick="gallery.goBack()"
       >
-        &lt;
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 7.75739L13.4142 9.1716L10.5858 12L13.4142 14.8285L12 16.2427L7.75736 12L12 7.75739Z"
+            fill="currentColor"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"
+            fill="currentColor"
+          />
+        </svg>
       </button>
 
       <button
         class="gallery-button gallery-button-next raised-panel"
         onclick="gallery.goNext()"
       >
-        &gt;
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.0858 7.75739L15.3284 12L11.0858 16.2427L9.67157 14.8285L12.5 12L9.67157 9.1716L11.0858 7.75739Z"
+            fill="currentColor"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z"
+            fill="currentColor"
+          />
+        </svg>
       </button>
       <!-- --------------------------------------------- -->
 
@@ -158,48 +192,22 @@
         </button> -->
       </div>
     </div>
-    <script>
-      const gallery = {
-        allPanels: [...document.querySelectorAll(".gallery-selected-item-box")],
-        currentPanelIndex: 0,
-        goNext: function () {
-          if (this.currentPanelIndex < this.allPanels.length - 1) {
-            this.currentPanelIndex = this.currentPanelIndex + 1;
-
-            this.updateVisiblePanel();
-          }
-        },
-        goBack: function () {
-          if (this.currentPanelIndex > 0) {
-            this.currentPanelIndex = this.currentPanelIndex - 1;
-
-            this.updateVisiblePanel();
-          }
-        },
-        updateVisiblePanel: function () {
-          // 1. hide all the panels
-          for (let i = 0; i < this.allPanels.length; i = i + 1) {
-            this.allPanels[i].classList.remove("display-block");
-          }
-          // 2. show the panel with the index === this.currentPanelIndex
-          this.allPanels[this.currentPanelIndex].classList.add("display-block");
-        },
-      };
-      gallery.updateVisiblePanel();
-
-      function showGalleryClickedItem(id) {
-        removeDisplayBlockFromElementById(1);
-        removeDisplayBlockFromElementById(2);
-        removeDisplayBlockFromElementById(3);
-
-        let GalleryClickedItem = document.getElementById(id);
-        GalleryClickedItem.classList.add("display-block");
-      }
-
-      function removeDisplayBlockFromElementById(id) {
-        let element = document.getElementById(id);
-        element.classList.remove("display-block");
-      }
-    </script>
+    <a href="/" class="gallery-button back-button">
+      <svg
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M6 22.8787C4.34315 22.8787 3 21.5355 3 19.8787V9.87866C3 9.84477 3.00169 9.81126 3.00498 9.77823H3C3 9.20227 3.2288 8.64989 3.63607 8.24262L9.87868 2.00002C11.0502 0.828445 12.9497 0.828445 14.1213 2.00002L20.3639 8.24264C20.7712 8.6499 21 9.20227 21 9.77823H20.995C20.9983 9.81126 21 9.84477 21 9.87866V19.8787C21 21.5355 19.6569 22.8787 18 22.8787H6ZM12.7071 3.41423L19 9.70713V19.8787C19 20.4309 18.5523 20.8787 18 20.8787H15V15.8787C15 14.2218 13.6569 12.8787 12 12.8787C10.3431 12.8787 9 14.2218 9 15.8787V20.8787H6C5.44772 20.8787 5 20.4309 5 19.8787V9.7072L11.2929 3.41423C11.6834 3.02371 12.3166 3.02371 12.7071 3.41423Z"
+          fill="currentColor"
+        />
+      </svg>
+    </a>
+    <script src="/scripts/section.js"></script>
   </body>
 </html>
