@@ -478,10 +478,13 @@ body.writing-section {
   }
 }
 
+.writing-section article h1 {
+  font-size: 40px;
+}
+
 .writing-section article p,
 .writing-section article h1 {
   margin-bottom: 32px;
-  font-size: 28px;
 }
 
 .writing-section article p {
